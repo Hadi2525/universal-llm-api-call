@@ -1,0 +1,37 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "universal-llm-api-call"  # Package name (adjust as desired)
+version = "0.1.0"
+authors = [
+    { name = "Hadi", email = "fullstackailab@gmail.com" },
+]
+description = "A FastAPI package with universal LLM API call"
+readme = "README.md"
+requires-python = ">=3.12"  # Targeting Python 3.12
+license = { file = "LICENSE" }
+dependencies = [
+    "python-dotenv==1.1.0",
+    "fastapi>=0.115.12",
+    "uvicorn>=0.34.0",
+    "openai>=1.70.0",
+]
+
+[project.urls]
+"Homepage" = "https://fullstackailab.netlify.app"
+"Source" = "https://github.com/hadi2525/universal-llm-api-call"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",  # Optional: for testing
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }  # Package root is src/
+py-modules = ["main", "utils"]  # Treat main.py and utils.py as modules
+
+[project.scripts]
+universal-llm-api-call = "main:app"  # CLI entry point (adjusted for src/ structure)
