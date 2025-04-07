@@ -41,6 +41,10 @@ Universal LLM API Call is a FastAPI-based application designed to provide a unif
 4. Install the required packages:
    ```bash
    pip install -r requirements.txt
+    ```
+    and install the package itself:
+   ```bash
+   pip install .
    ```
 5. Set up environment variables:
    Create a `.env` file in the root directory of the project and add your API keys:
@@ -81,24 +85,7 @@ curl -X POST "http://localhost:8000/stream/response" \
   "prompt": "What is the capital of France?"
 }'
 ```
-### Sync Response
-```bash
-curl -X POST "http://localhost:8000/sync/response" \
--H "Content-Type: application/json" \
--d '{
-  "vendor": "openai",
-  "prompt": "What is the capital of France?"
-}'
-```
-### Async Response
-```bash
-curl -X POST "http://localhost:8000/async/response" \
--H "Content-Type: application/json" \
--d '{
-  "vendor": "google",
-  "prompt": "What is the capital of France?"
-}'
-```
+
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 ## Contributing
