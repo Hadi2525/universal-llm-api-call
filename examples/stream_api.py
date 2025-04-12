@@ -7,8 +7,8 @@ url = "http://localhost:8000/stream/response"
 # Request payload
 payload = {
     "prompt": "Write a poem about the sea",
-    "vendor": "openai",  # Optional
-    "model": "gpt-4o-mini"  # Optional
+    "vendor": "google",  # Optional
+    "model": "gemini-2.0-flash"  # Optional
 }
 
 # Headers
